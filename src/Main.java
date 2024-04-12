@@ -1,8 +1,19 @@
 public class Main {
     public static void main(String[] args)
     {
-        //Fernando, na parte da composicao e agregacao da Camera e da Guerra eu confundi as coisas, acabei ficando nervoso também
-        // E não consegui acabar de fazer, juro que dei meu máximo
-        // Mas reconheço que com mais estudo e mais foco vou conseguir melhorar
+        Empilhador empilhador = new Empilhador(100,"embilhador",300,500);
+        empilhador.adicionaPacote(100);
+        empilhador.adicionaPacote(100);
+        empilhador.adicionaPacote(100);
+        empilhador.adicionaPacote(100);
+        empilhador.adicionaPacote(500);
+        empilhador.mostraPacotes();
+
+        BracoArticulado bracoArticulado = new BracoArticulado(200,"Armbot",500,2, 5);
+        Camera camera1 = new Camera(100);
+        bracoArticulado.setCamera(camera1);
+        bracoArticulado.trabalhar();
+
+        BracoArticulado bracoArticulado2 = new BracoArticulado(200,"Armbot",500,2, 3);
     }
 }

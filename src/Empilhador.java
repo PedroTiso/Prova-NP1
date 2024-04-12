@@ -4,6 +4,7 @@ public class Empilhador extends Robo {
 
     public Empilhador(int energia, String nome, int totalDeRobos, int pesoMaximo){
         super(energia, nome, totalDeRobos, pesoMaximo);
+        this.pesoMaximo = pesoMaximo;
        for(int i = 0; i < pacote.length; i++){
            pacote[i] = new Pacote();
        }
@@ -13,6 +14,8 @@ public class Empilhador extends Robo {
         for(int i = 0; i < pacote.length; i++){
             if(pacote[i].getPeso() == 0){
                 pacote[i].setPeso(peso);
+                System.out.println("O pacote foi adicionado");
+                break;
             }
         }
     }
@@ -27,6 +30,10 @@ public class Empilhador extends Robo {
     }
 
     public void mostraPacotes(){
-        System.out.println("Mostrando os pacotes");
+       for(int i = 0; i < pacote.length; i++){
+           if (pacote[i].getPeso() != 0) {
+               System.out.println("Pacote " + i + ": Peso: " + pacote[i].getPeso());
+           }
+       }
     }
 }
